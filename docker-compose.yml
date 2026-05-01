@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  pronote-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pronote_bot
+    environment:
+      - ENT_USERNAME=${ENT_USERNAME}
+      - ENT_PASSWORD=${ENT_PASSWORD}
+      - MQTT_BROKER=${MQTT_BROKER}
+      - MQTT_USERNAME=${MQTT_USERNAME}
+      - MQTT_PASSWORD=${MQTT_PASSWORD}
+      - NODE_ENV=production
+    volumes:
+      - ./emploi.json:/app/emploi.json
+      - /dev/shm:/dev/shm
+    restart: unless-stopped
+    network_mode: host
+    mem_limit: 1g
+    shm_size: 512mb
