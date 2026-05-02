@@ -21,7 +21,7 @@ Un bot automatisé pour récupérer votre emploi du temps depuis Pronote et le p
 ### 1. Cloner le repository
 
 ```bash
-git clone https://github.com/your-username/pronote-bot.git
+git clone https://github.com/artemis-fowl-fowl/home-assistant-homeassistant.git
 cd pronote-bot
 ```
 
